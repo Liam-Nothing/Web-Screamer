@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Content-Type" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Content-Language" content="fr">
+    <style>
+        #capchat {
+            text-align:center;
+            margin: auto;
+            max-width:80%;
+        }
+
+        #capchat img{
+            margin-top: 70px;
+            border-radius: 10px;
+            border: 4px solid #ccc;
+            /* width:100%; */
+            max-width:100%;
+        }
+
+        body {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            padding:0;
+            margin:0;
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background-image: url('img/backdoodle.png');
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-image: url('img/mobilebackdoodle.jpg');
+            }
+            }
+
+        .scream{
+            background-image: url('img/jeff.gif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            padding:0;
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div id="capchat">
+            <img src="img/recaptcha.png" onclick="play()"/>
+            <audio loop preload="auto" id="audio" src="src/myNameIsJeff.mp3"></audio>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+            document.getElementsByTagName("body")[0].classList.add("scream");
+            document.getElementById("capchat").style.display = "none";
+            setTimeout(function() {window.location.replace("https://nothingelse.fr/");}, 3000)
+        }
+    </script>
+</body>
+
+</html>

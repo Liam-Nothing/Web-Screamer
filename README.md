@@ -1,5 +1,5 @@
 # Web-Screamer
-Jeff come back ! When victim click on fack image of recapchat, that activ nav and we can run sound !
+Jeff come back ! When victim click on fack image of recapchat, that active sound ! (bypassing browser restrictions)
 
 ## Customize
 - Change redirection url in `index.html`.
